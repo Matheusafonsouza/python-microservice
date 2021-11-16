@@ -16,11 +16,13 @@ class ProductViewSet(viewsets.ViewSet):
         serializer.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
-    def retrieve(self, request):
+    def retrieve(self, request, pk=None):
+        product = Product.objects.get(pk=pk)
+        serializer = ProductSerializer(product)
+        return Response(serializer.data)
+
+    def update(self, request, pk=None):
         pass
 
-    def update(self, request):
-        pass
-
-    def destroy(self, request):
+    def destroy(self, request, pk=None):
         pass
