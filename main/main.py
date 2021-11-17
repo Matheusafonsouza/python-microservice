@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_cors import CORS
-from flask_sqalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import UniqueConstraint
 
 app = Flask(__name__)
