@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  app:
+  admin:
     build:
       context: .
       dockerfile: Dockerfile
